@@ -19,28 +19,42 @@ body {
   background-color: var(--color-fondo);
   color: #333;
   line-height: 1.6;
-  padding: 1rem;
+  padding: 0 3rem;
+}
+
+.header-banner {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 0.7rem 15rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-banner a,p {
+  margin: 0;
+  display: flex;
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
 }
 
 header, footer{
-  background-color: var(--color-primario);
-  color: white;
-  padding: 1rem;
+  background-color: white;
+  color: var(--color-primario);
   text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 
-h1{
-  font-family: 'roboto', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.logo img{
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: auto;
   color: white;
-  background-color: var(--color-primario);
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: white;
 }
 
 .header-top {
@@ -50,26 +64,12 @@ h1{
   gap: 1rem;
 }
 
-.header-top h1 {
-  grid-column: 2;
-  justify-self: center;
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: var(--color-primario);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
 .buscador {
   display: flex;
   align-items: center;
   background: white;
   border-radius: 5px;
-  padding: 0.25rem;
+  padding: 1rem;
   max-width: 300px;
   width: 100%;
   margin: 0;
@@ -81,6 +81,7 @@ h1{
   font-size: 1rem;
   border-radius: 5px 0 0 5px;
   flex: 1;
+  background-color: rgba(204, 194, 194, 0.178);
 }
 
 .buscador button {
@@ -97,6 +98,7 @@ h1{
     margin-top: 1rem;
     width: 100%;
     max-width: 400px;
+    margin-left: auto;
 }
 
 .rebajas img{
@@ -152,15 +154,23 @@ h2, h3 {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1;
+  margin: 0.5rem 0 0 0;
 }
 
 nav a{
-  color: white;
+  color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: lighter;
+  padding: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  padding: 1rem;
 }
 
 .hero {
@@ -192,6 +202,12 @@ h1, h2, h3{
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.grid-productos article a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .grid-productos img {
   width: 100%;
   max-height: 250px;
@@ -201,11 +217,35 @@ h1, h2, h3{
 .grid-productos a{
   display: inline-block;
   margin-top: 0.5rem;
-  background: var(--color-primario);
-  color: white;
+  background: white;
+  color: var(--color-primario);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+}
+
+.grid-productos article a:hover h3{
+  text-decoration: underline;
+  color: var(--color-primario);
+}
+
+.grid-productos article h3{
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
+}
+
+.enlace-producto{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+}
+
+.enlace-producto img{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 .slider-css{
@@ -241,6 +281,17 @@ h1, h2, h3{
 
 footer {
   margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  color: var(--color-primario);
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer p{
+  margin: 0;
+  padding: 1rem;
+  color: var(--color-primario);
 }
 
 /*Responsive*/
